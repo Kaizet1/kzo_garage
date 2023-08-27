@@ -56,8 +56,8 @@ function Garagee_Pos()
 end
 
 Citizen.CreateThread(function()
+    Citizen.Wait(10000)
     CreateBlip()
-    Citizen.Wait(2000)
     while true do
         cansee = false
         Garagee_Pos()
