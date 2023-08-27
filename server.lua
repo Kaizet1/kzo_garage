@@ -178,7 +178,7 @@ AddEventHandler('esx_garage:DeleteVehicle', function(data)
             local vehicle = json.decode(result[1].vehicle)
             if vehicle.plate == data.plate then
                 RemoveOwnedVehicle(data.plate)
-                xPlayer.triggerEvent('esx:showNotification', 'Bạn đã xóa xe biển số: ' .. data.plate)
+                xPlayer.triggerEvent('esx:showNotification', 'You deleted: ' .. data.plate)
             end
         end
     end)
