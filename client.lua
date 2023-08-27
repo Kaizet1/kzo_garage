@@ -55,9 +55,11 @@ function Garagee_Pos()
     return
 end
 
-Citizen.CreateThread(function()
-    Citizen.Wait(10000)
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function(xPlayer)
+    Citizen.Wait(1000)
     CreateBlip()
+    Citizen.Wait(1000)
     while true do
         cansee = false
         Garagee_Pos()
